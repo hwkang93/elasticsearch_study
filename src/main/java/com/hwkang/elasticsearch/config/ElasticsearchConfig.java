@@ -14,7 +14,7 @@ import org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate;
 
 @Configuration
 @Slf4j
-public class ELKConfig extends AbstractElasticsearchConfiguration {
+public class ElasticsearchConfig extends AbstractElasticsearchConfiguration {
 
     @Value("${elasticsearch.host")
     private String host;
