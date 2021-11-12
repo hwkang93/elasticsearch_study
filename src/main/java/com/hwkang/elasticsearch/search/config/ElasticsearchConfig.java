@@ -1,7 +1,6 @@
-package com.hwkang.elasticsearch.config;
+package com.hwkang.elasticsearch.search.config;
 
 import lombok.extern.slf4j.Slf4j;
-import org.elasticsearch.client.RestClient;
 import org.elasticsearch.client.RestHighLevelClient;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -16,11 +15,11 @@ import org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate;
 @Slf4j
 public class ElasticsearchConfig extends AbstractElasticsearchConfiguration {
 
-    @Value("${elasticsearch.host")
-    private String host;
-
     @Value("${elasticsearch.port}")
     private int port;
+
+    @Value("${elasticsearch.host}")
+    private String host;
 
     @Override
     @Bean
