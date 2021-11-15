@@ -1,11 +1,8 @@
 package com.hwkang.elasticsearch.search.service.impl;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hwkang.elasticsearch.search.data.SearchIndex;
 import com.hwkang.elasticsearch.search.service.SearchService;
 import lombok.RequiredArgsConstructor;
-import org.elasticsearch.action.get.GetResponse;
-import org.elasticsearch.action.index.IndexRequest;
 import org.elasticsearch.action.search.SearchRequest;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.RequestOptions;
@@ -25,14 +22,6 @@ import java.util.Map;
 public class SearchServiceImpl implements SearchService {
 
     private final RestHighLevelClient restHighLevelClient;
-
-    @Override
-    public <T> void addDocument(String index, T t) throws IOException {
-        Map<String , Object> source = new ObjectMapper().convertValue(t, Map.class);
-        IndexRequest indexRequest = new IndexRequest(index).source(source);
-
-        restHighLevelClient.index(indexRequest, RequestOptions.DEFAULT);
-    }
 
     @Override
     public List<Map<String, Object>> searchTermQueryByTitle(String title) throws IOException {
