@@ -1,6 +1,7 @@
 package com.hwkang.elasticsearch.search.service;
 
 import com.hwkang.elasticsearch.search.data.SearchIndex;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.util.Map;

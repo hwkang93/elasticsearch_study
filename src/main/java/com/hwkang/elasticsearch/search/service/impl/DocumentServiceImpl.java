@@ -58,6 +58,12 @@ public class DocumentServiceImpl implements DocumentService {
         restHighLevelClient.delete(deleteRequest, RequestOptions.DEFAULT);
     }
 
+    /**
+     * SearchIndex -> String Type 으로 형변환 + validation check
+     *  (type == all -> throw illegalArgsException)
+     * @param index
+     * @return
+     */
     private String toStringOf(SearchIndex index) {
         if(index == SearchIndex.ALL) {
             throw new IllegalArgumentException("SearchIndex.ALL is not allowed");
