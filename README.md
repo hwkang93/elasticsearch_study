@@ -1,3 +1,10 @@
+---------
+
+잠깐 멈춤.
+이론 공부 더하고 다시 시작.
+
+---------
+
 [Elasticsearch 개념 정리글로 이동](https://github.com/hwkang93/study/blob/main/java/elasticsearch.md)
 
 # Elasticsearch 설치하기
