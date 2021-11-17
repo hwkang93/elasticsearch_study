@@ -43,7 +43,7 @@ public class DocumentTest {
         //1.given
 
         //2.when
-        Map<String,Object> resultMap = documentService.getDocument(SearchIndex.PICTURE, ID);
+        Map<String, Object> resultMap = documentService.getDocument(SearchIndex.PICTURE, ID);
 
         //3.then
         resultMap.keySet().forEach(key -> {
@@ -52,16 +52,4 @@ public class DocumentTest {
         });
         assertThat(resultMap.size()).isEqualTo(10);
     }
-/*
-    @Test
-    @DisplayName("document 수정")
-    void putDocument() {
-        //1.given
-        documentService.putDocument();
-        //2.when
-
-        //3.then
-    }
-*/
-
 }
